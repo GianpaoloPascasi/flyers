@@ -10,7 +10,7 @@
   "compilerOptions": {
     "rootDir": "./src",
     "resolveJsonModule": true,
-    "outDir": "backend/debug_build",
+    "outDir": "./debug_build",
     "skipLibCheck": true,
     "lib": ["ES2019"],
     "target": "es2017",

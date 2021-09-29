@@ -8,7 +8,7 @@
 				"$tsc"
 			],
 			"group": "build",
-			"label": "tsc: build - backend/tsconfig.debug.json"
+			"label": "tsc: build - backend/tsconfig.debug.json",
 		}
 	]
 }
