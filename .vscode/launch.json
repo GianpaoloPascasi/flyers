@@ -5,16 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-node",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${file}",
+            "name": "Launch Debug",
+            "preLaunchTask": "tsc: build - backend/tsconfig.debug.json",
+            "program": "${workspaceFolder}/backend/src/app.ts",
+            "sourceMaps": true,
+            "trace": true,
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+                "${workspaceFolder}/backend/debug_build/**/*.js"
+            ],
+            "env": {
+               
+            },
         }
     ]
 }
