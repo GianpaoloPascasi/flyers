@@ -1,9 +1,9 @@
 export interface Flyer {
-    id: Number;
-    title: String;
-    startDate: String;
-    endDate: String;
-    isPublished: Boolean;
-    retailer: String;
-    category: String;
+    id: number;
+    title: string;
+    startDate: string;
+    endDate: string;
+    isPublished: boolean;
+    retailer: string;
+    category: string;
 }

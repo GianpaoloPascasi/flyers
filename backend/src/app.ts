@@ -1,3 +1,9 @@
-import { getFlyers } from "./db";
+import { AppDatabase } from "./db";
 
-getFlyers();
+const db = new AppDatabase();
+
+setTimeout(() => {
+    db.getFlyers(false, 0, 100).then(flyers => {
+        console.log(flyers);
+    });
+}, 3000);
