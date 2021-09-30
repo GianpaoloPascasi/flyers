@@ -53,14 +53,18 @@ export class AppDatabase {
             });
     }
 
-    public async getFlyers(full = true, start: number, end: number) {
+    public async getFlyers(full = true, start?: number, end?: number) {
         if (this.doneLoadingCsv) {
             return full ? this.flyers : this.flyers.slice(start, end);
         }
-        if (hasEnoughElements(this.flyers.length, start, end)) {
+        if (hasEnoughElements(this.flyers.length, start!, end!)) {
             return [];
         }
-        return this.onFinishGetFlyers(full, start, end);
+        return this.onFinishGetFlyers(full, start!, end!);
+    }
+
+    public async getNumberOfFlyers(){
+        return this.flyers.length;
     }
 
     private onFinishGetFlyers(full: boolean, start: number, end: number) {

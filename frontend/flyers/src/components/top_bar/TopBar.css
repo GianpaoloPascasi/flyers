@@ -1,0 +1,9 @@
+.top-bar{
+    height: 1.8rem;
+}
+
+@media (min-width: 600px) {
+    .top-bar{
+        height: 2.3rem;
+    }
+}

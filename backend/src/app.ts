@@ -1,9 +1,12 @@
+import express from "express";
 import { AppDatabase } from "./db";
+import FlyersRouter from "./routers/flyers";
 
-const db = new AppDatabase();
+const dbInstance = new AppDatabase();
+const app = express();
 
-setTimeout(() => {
-    db.getFlyers(false, 0, 100).then(flyers => {
-        console.log(flyers);
-    });
-}, 3000);
+app.use("/api/flyers", new FlyersRouter(dbInstance).getRouter());
+
+app.listen(8080, "localhost", () => {
+    console.log("Flyers app up and running");
+});
