@@ -5,6 +5,7 @@
     "./node_modules/**/*",
     "static/**/*",
     "./debug_build/**/*",
+    "./prod_build/**/*",
   ],
   "include": [
     "./**/*",
@@ -23,7 +24,7 @@
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     "sourceMap": false, /* Generates corresponding '.map' file. */
     // "outFile": "./app.js",                       /* Concatenate and emit output to single file. */
-    "outDir": "static", /* Redirect output structure to the directory. */
+    "outDir": "prod_build", /* Redirect output structure to the directory. */
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
     // "removeComments": true,                /* Do not emit comments to output. */

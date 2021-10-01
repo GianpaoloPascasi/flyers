@@ -12,6 +12,6 @@ app.use(cors({
 app.use("/api/flyers", new FlyersRouter(dbInstance).getRouter());
 app.use("", express.static(`${__dirname}/../static`));
 
-app.listen(8080, "localhost", () => {
+app.listen(8080, "0.0.0.0", () => {
     console.log("Flyers app up and running");
 });

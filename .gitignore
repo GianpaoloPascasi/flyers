@@ -3,3 +3,4 @@ node_modules/
 build/
 debug_build/
 static/
+prod_build
