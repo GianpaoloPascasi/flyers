@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { FlyerResponseData, FlyersResponse } from "../models/Response";
+import { AppResponse, FlyerResponseData, FlyersResponse } from "../models/Response";
 import { AppDatabase } from "../db";
 import { Pageable } from "../models/request";
 
@@ -27,6 +27,12 @@ class FlyersRouter {
                 this.db.getNumberOfFlyers()
             ]).then(results => {
                 res.json(new FlyersResponse(200, "ok", new FlyerResponseData(results[0], results[1])));
+            }).catch(e => {
+                console.error(e);
+                res.status(500)
+                    .json(new AppResponse(500, "Errore inaspettato del server", {
+                        errorCode: "#01"
+                    }));
             });
         });
     }

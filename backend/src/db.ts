@@ -19,9 +19,17 @@ export class AppDatabase {
             .on("data", (data: string) => {
 
                 chunked += data;
-                let tempChunked = "";
+                // if (chunked[chunked.length - 1] !== EOL) {
+                //     return;
+                // }
+                // let tempChunked = "";
 
-                chunked.split(EOL).forEach(row => {
+                
+
+                // chunked = tempChunked;
+            })
+            .on("end", () => {
+                chunked.split("\r\n").forEach(row => {
                     const values = row.split(",");
 
                     if (firstTime) {
@@ -30,25 +38,22 @@ export class AppDatabase {
                         return;
                     }
 
-                    if (values.length < numCols) {
-                        tempChunked += row;
-                        return;
-                    }
+                    // if (values.length < numCols) {
+                    //     tempChunked += row;
+                    //     return;
+                    // }
 
                     this.flyers.push({
                         id: Number(values[0]),
                         title: values[1],
-                        startDate: values[2],
-                        endDate: values[3],
-                        isPublished: values[4] === "1",
+                        start_date: values[2],
+                        end_date: values[3],
+                        is_published: Number(values[4]),
                         retailer: values[5],
                         category: values[6],
                     })
                 });
 
-                chunked = tempChunked;
-            })
-            .on("end", () => {
                 this.doneLoadingCsv = true;
             });
     }
@@ -63,7 +68,7 @@ export class AppDatabase {
         return this.onFinishGetFlyers(full, start!, end!);
     }
 
-    public async getNumberOfFlyers(){
+    public async getNumberOfFlyers() {
         return this.flyers.length;
     }
 

@@ -1,0 +1,12 @@
+.menu-item{
+    color: #757575;
+}
+
+.menu-item .bi{
+    font-size: 1.1rem;
+}
+
+.menu-item.selected{
+    background-color: #f0ebfc;
+    color: #3b00dd;
+}

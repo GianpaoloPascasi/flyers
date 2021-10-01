@@ -1,0 +1,9 @@
+.loading-container {
+    position: fixed;
+    height: 100vh!important;
+    width: 100vw!important;
+    margin: 0;
+    padding: 0;
+    background-color: #adadad9a;
+    z-index: 3;
+}
