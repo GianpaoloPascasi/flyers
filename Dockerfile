@@ -5,6 +5,7 @@ COPY ./backend/prod_build ./prod_build
 COPY ./backend/static ./static
 COPY ./backend/data ./data
 RUN npm install
+ENV NODE_ENV=production
 CMD [ "node", "prod_build/app.js" ]
 
 EXPOSE 8080

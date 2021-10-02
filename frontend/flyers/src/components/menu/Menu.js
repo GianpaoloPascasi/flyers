@@ -1,6 +1,6 @@
 import MenuItem from "./menu-item/MenuItem";
 import "./Menu.css";
-import logo from "../../logo.png";
+import logo from "../../static/logo-shopfully.png";
 
 const Menu = ({ items, isMenuShown = false, onSelectFlyer, onToggleMenu, selectedFlyerId }) => {
     

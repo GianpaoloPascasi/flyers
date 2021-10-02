@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
-import { AppResponse, FlyerResponseData, FlyersResponse } from "../models/Response";
 import { AppDatabase } from "../db";
 import { Pageable } from "../models/request";
+import { FlyersResponse, FlyerResponseData, AppResponse } from "../models/response";
 
 class FlyersRouter {
 
