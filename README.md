@@ -6,6 +6,8 @@ Requirements: unix or windows, docker started up, node v15.0.1;
 To start the app exeute the following command (be sure to stay in the root repo folder):
 - npm run (use `windows` or `unix` based on your OS)
 
+Note: if you need to restart the windows build after changes use `npm run windows-refresh` instead of `npm run windows`. This is a fast workaround, check the package.json in the root.
+
 This script will install all npm deps for the backend, will create the docker instance, will copy the transpiled backend files in the docker vm and will start it.
 You can now reach the site at localhost:8080 and the api at localhost:8080/api.
 

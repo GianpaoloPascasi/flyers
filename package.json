@@ -1,6 +1,7 @@
 {
     "scripts": {
         "unix": "cd frontend/flyers && npm run build && cd ../.. && rm -r backend/static && mv frontend/flyers/build backend/static && cd backend && npm install && rm -r prod_build && tsc -p tsconfig.json && cd ../ && docker build . -t gianpaolo.pascasi/shofully-app && docker run -p 8080:8080 -d gianpaolo.pascasi/shofully-app",
-        "windows": "cd frontend/flyers && npm install && npm run build && cd ../.. && rd /s/q \"backend/static\" 2> nul && move frontend/flyers/build backend/static && cd backend && npm install && rd /s/q \"prod_build\" 2> nul && tsc -p tsconfig.json && cd ../ && docker build . -t gianpaolo.pascasi/shofully-app && docker run -p 8080:8080 -d gianpaolo.pascasi/shofully-app"
+        "windows": "cd frontend/flyers && npm install && npm run build && cd ../.. && move frontend/flyers/build backend/static && cd backend && npm install && node_modules\\.bin\\tsc -p tsconfig.json && cd ../ && docker build . -t gianpaolo.pascasi/shofully-app && docker run -p 8080:8080 -d gianpaolo.pascasi/shofully-app",
+        "windows-refresh": "cd frontend/flyers && npm install && npm run build && cd ../.. && rd /s/q \"backend/static\" 2> nul && move frontend/flyers/build backend/static && cd backend && npm install && rd /s/q \"prod_build\" 2> nul && node_modules\\.bin\\tsc -p tsconfig.json && cd ../ && docker build . -t gianpaolo.pascasi/shofully-app && docker run -p 8080:8080 -d gianpaolo.pascasi/shofully-app"
     }
 }
