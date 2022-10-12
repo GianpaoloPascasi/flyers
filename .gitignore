@@ -2,5 +2,4 @@ node_modules/
 .DS_STORE
 build/
 debug_build/
-static/
 prod_build
