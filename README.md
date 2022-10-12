@@ -12,8 +12,8 @@ This script will install all npm deps for the backend, will create the docker in
 You can now reach the site at localhost:8080 and the api at localhost:8080/api.
 
 Implemented features:
-- express buil-in webserver;
-(frontend works well only on mobile)
+- express built-in webserver;
+- (frontend works well only on mobile)
 - react-bootstrap;
 - swipe menu;
 - list lazy loading;
@@ -29,7 +29,7 @@ Lo script npm si occuperà di installare le dipendenze di node nella cartella de
 L'app ora raggiunbile su localhost:8080 e le api su localhost:8080/api
 
 Funzionalità implementate:
-- buil-in webserver di express;
+- built-in webserver di express;
 - react-bootstrap;
 - swipe per apertura/chiusura menu;
 - lazy loading quando la lista da scrollare arriva alla fine;
