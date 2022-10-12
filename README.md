@@ -1,1 +1,1 @@
-An hiring challange.
+An hiring challenge.
