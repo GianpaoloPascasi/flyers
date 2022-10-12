@@ -1,0 +1,16 @@
+.menu-container {
+    position: absolute;
+    height: 100vh!important;
+    width: 100%!important;
+    max-height: 100vh!important;
+    background-color: #adadad9a;
+    z-index: 2;
+}
+
+.menu {
+    width: 85%!important;
+    max-width: 85%!important;
+    height: 100vh!important;
+    max-height: 100vh!important;
+    background-color: #fff;
+}

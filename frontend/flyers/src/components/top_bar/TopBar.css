@@ -1,0 +1,22 @@
+.top-bar{
+    height: 8vh !important;
+    max-height: 8vh !important;
+}
+
+.top-bar .title{
+    font-size: 1.2rem;
+}
+
+.top-bar .bi.bi-list{
+    font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .top-bar .title{
+        font-size: 2rem;
+    }
+    
+    .top-bar .bi.bi-list{
+        font-size: 2.3rem;
+    }
+}
