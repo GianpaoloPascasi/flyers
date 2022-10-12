@@ -13,6 +13,7 @@ You can now reach the site at localhost:8080 and the api at localhost:8080/api.
 
 Implemented features:
 - express buil-in webserver;
+(frontend works well only on mobile)
 - react-bootstrap;
 - swipe menu;
 - list lazy loading;
